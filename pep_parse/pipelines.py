@@ -2,7 +2,7 @@ import csv
 from collections import defaultdict
 from itemadapter import ItemAdapter
 
-from .settings import RESULTS_DIR, STATUS_FILE_NAME, BASE_DIR
+from .settings import STATUS_FILE_NAME, BASE_DIR, RESULTS
 
 
 class PepParsePipeline:
@@ -19,6 +19,7 @@ class PepParsePipeline:
     def close_spider(self, spider):
         status_counts = self.status_counts
         total_count = sum(status_counts.values())
+        RESULTS_DIR = BASE_DIR / RESULTS
         with open(RESULTS_DIR / STATUS_FILE_NAME,
                   mode='w',
                   encoding='utf-8') as csvfile:

@@ -3,7 +3,6 @@ from datetime import datetime
 
 BASE_DIR = Path(__file__).parent.parent
 RESULTS = 'results'
-RESULTS_DIR = BASE_DIR / RESULTS
 
 BOT_NAME = 'pep_parse'
 
