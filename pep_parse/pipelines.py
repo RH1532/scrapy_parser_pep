@@ -2,7 +2,7 @@ import csv
 from collections import defaultdict
 from itemadapter import ItemAdapter
 
-from .settings import RESULTS_DIR, STATUS_FILE_NAME
+from .settings import RESULTS_DIR, STATUS_FILE_NAME, BASE_DIR
 
 
 class PepParsePipeline:
